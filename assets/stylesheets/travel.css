@@ -4,9 +4,11 @@ to border-box. Elements should have padding and
 border included in the element's total width and height
 */
 
-*{
+* {
   box-sizing: border-box;
 }
+
+
 
 /*
 Set some common styles for the body of the page
@@ -15,36 +17,38 @@ Set some common styles for the body of the page
  - font to Helvetica
  - font size to 16px
 */
+body {
 
-body{
   background-color: black;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica;
   font-size: 16px;
+
 }
+
 
 
 /*
 override our h1 style to have a font size of 32px
 */
-
-h1{
+h1 {
   font-size: 32px;
 }
+
+
 
 /*
 override our h2 style to have a font size of 28px
 */
-
-h2{
+h2 {
   font-size: 28px;
 }
+
 
 /*
 style the element with the id of header-statement to have centered text
 */
-
-#header-statement{
+#header-statement {
   text-align: center;
 }
 
@@ -55,13 +59,12 @@ style the elements with a class of page-row
  - give the element padding of 5%
  - give the element a margin of 2% on the top and bottom
 */
-.page-row{
+.page-row {
   clear: both;
   padding: 5%;
-  margin-bottom:2% ;
   margin-top: 2%;
+  margin-bottom: 2%
 }
-
 
 
 /* no action item: clearfix for page row */
@@ -86,12 +89,11 @@ style the elements with a class of card
  - set the background size to contain //Scale the image to the largest size such that both its width and its height can fit inside the content area
  - set the background to not repeat
 */
-
-.card{
+.card {
   width: 20%;
   height: 350px;
   margin: 2.5%;
-  padding: 15%;
+  padding-top: 15%;
   float: left;
   background-color: white;
   text-align: center;
@@ -101,7 +103,8 @@ style the elements with a class of card
 }
 
 
- 
+
+
 /*
 style the element with the id of hero
  - height of 450px
@@ -110,56 +113,54 @@ style the element with the id of hero
  - set the background image to our hero image (travel_hero.jpg) in our assets/images directory
  - set the background image to be fixed // this will give the effect of the page scrolling over the hero image
 */
-
-#hero{
+#hero {
   height: 450px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../images/travel_hero.jpg");
-  background-position: fixed;
+  background-attachment: fixed;
 }
+
 
 
 /*
  target the element with the class of card that also has an id of spain
  set the background image to (spain_flag.svg) in our assets/images directory
 */
-
-.card#spain{
+.card#spain {
   background-image: url("../images/spain_flag.svg");
-
 }
+
 
 
 /*
  target the element with the class of card that also has an id of italy
  set the background image to (italy_flag.svg) in our assets/images directory
 */
-
-.card#italy{
+.card#italy {
   background-image: url("../images/italy_flag.svg");
-
 }
+
 
 
 /*
  target the element with the class of card that also has an id of aruba
  set the background image to (aruba_flag.svg) in our assets/images directory
 */
-
-
-.card#aruba{
+.card#aruba {
   background-image: url("../images/aruba_flag.svg");
 }
+
+
 
 /*
  target the element with the class of card that also has an id of chile
  set the background image to (chile_flag.svg) in our assets/images directory
 */
-
-.card#chile{
+.card#chile {
   background-image: url("../images/chile_flag.svg");
 }
+
 
 
 /*
@@ -168,23 +169,27 @@ style the element with the id of hero
   - line height of 100px
 */
 
-
 header{
-  height: 100px;
+  height:100;
   line-height: 100px;
 }
- 
+
+
 /* no action item: clearfix for header */
 header::after {
   content: "";
   clear: both;
   display: block;
+
 }
 
 /*
  target the element with the id of logo and float it to the left
 */
 
+#logo {
+  float: left;
+}
 
 
 
@@ -193,14 +198,21 @@ header::after {
 */
 
 
+nav{
+  float:right;
+}
 
-
- /*
+/*
  target the element with the id of nav-list
   - remove all margin and padding
   - remove bullets from the unordered list
 */
 
+#nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 
 
@@ -211,7 +223,11 @@ header::after {
   - left and right padding of 15px
 */
 
-
+.nav-link{
+  display:inline;
+  padding:5px 15px 5px 15px;
+  
+}
 
 
 /*
@@ -220,7 +236,10 @@ header::after {
   - make sure the text is white
 */
 
-
+header a{
+text-decoration: none;
+color:white
+}
 
 
 /*
@@ -230,6 +249,12 @@ header::after {
   - make the width 100%
 */
 
+table{
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: 100%;
+}
+
 
 
 
@@ -237,7 +262,10 @@ header::after {
  target the tr, td, and th elements
   - give a 2px black solid border to the table
 */
-
+tr,td,th{
+  border: 2px solid black;
+  padding: 5px;
+}
 
 
 
@@ -247,6 +275,10 @@ header::after {
   - set the text color to white
 */
 
+th{
+  background-color: black;
+  color:white;
+}
 
 
 
@@ -256,14 +288,19 @@ header::after {
   - make the background color white
 */
 
-
+#travel-table{
+  background-color: white;
+  color: black;
+}
 
 
 /*
  target the h3 element within the element with the id of travel-table 
   - center align the text
 */
-
+#travel-table h3{
+  text-align: center;
+}
 
 
 
@@ -272,10 +309,14 @@ header::after {
   - set the height to 100px
   - set the line height to 100px
 */
+footer{
+  height: 100px;
+  line-height: 100px;
+}
 
 /* no action item: clearfix for footer */
 footer::after {
-  content: "";
+  content: "clearfix";
   clear: both;
   display: block;
 }
@@ -284,7 +325,9 @@ footer::after {
 /*
  target the element with the id of copyright and float it to the left
 */
-
+#copyright{
+  float: left;
+}
 
 
 /*
@@ -294,10 +337,17 @@ footer::after {
   - give a left and right padding of 15px
 */
 
-
+#social-links{
+  float: right;
+  padding: 5px 15px 5px 15px;
+}
 
 /*
  target the links inside the element with the id of social-links
   - make sure the text is white and there is no underline
 */
 
+#social-links a{
+  text-decoration: none;
+  color: white;
+}
